@@ -1,0 +1,78 @@
+#define CONFIG_MQTT_SECURITY_ON
+#define CONFIG_MQTT_PRIORITY 5
+#define CONFIG_MQTT_LOG_ERROR_ON
+#define CONFIG_MQTT_LOG_WARN_ON
+#define CONFIG_MQTT_LOG_INFO_ON
+#define CONFIG_MQTT_RECONNECT_TIMEOUT 60
+#define CONFIG_MQTT_QUEUE_BUFFER_SIZE_WORD 1024
+#define CONFIG_MQTT_BUFFER_SIZE_BYTE 1024
+#define CONFIG_MQTT_MAX_HOST_LEN 64
+#define CONFIG_MQTT_MAX_CLIENT_LEN 32
+#define CONFIG_MQTT_MAX_USERNAME_LEN 32
+#define CONFIG_MQTT_MAX_PASSWORD_LEN 32
+#define CONFIG_MQTT_MAX_LWT_TOPIC 32
+#define CONFIG_MQTT_MAX_LWT_MSG 32
+menu "ESP MQTT TuanPM"
+
+config MQTT_PROTOCOL_311
+	bool "MQTT protocol 311 enable"
+	default y
+
+config MQTT_SECURITY_ON
+	bool "MQTT SSL enable"
+	default n
+
+config MQTT_PRIORITY
+	int "MQTT task priority"
+	default 5
+
+config MQTT_LOG_ERROR_ON
+	bool "MQTT error log enable"
+	default y
+
+config MQTT_LOG_WARN_ON
+	bool "MQTT warning log enable"
+	default y
+
+config MQTT_LOG_INFO_ON
+	bool "MQTT info log enable"
+	default n
+
+config MQTT_RECONNECT_TIMEOUT
+	int "MQTT reconnect timeout"
+	default 60
+
+config MQTT_QUEUE_BUFFER_SIZE_WORD
+	int "MQTT queue buffer size in word"
+	default 1024
+
+config MQTT_BUFFER_SIZE_BYTE
+	int "MQTT buffer size in byte"
+	default 1024
+
+config MQTT_MAX_HOST_LEN
+	int "MQTT max host length"
+	default 64
+
+config MQTT_MAX_CLIENT_LEN
+	int "MQTT max client id length"
+	default 32
+
+config MQTT_MAX_USERNAME_LEN
+	int "MQTT max username length"
+	default 32
+
+config MQTT_MAX_PASSWORD_LEN
+	int "MQTT max password length"
+	default 32
+
+config MQTT_MAX_LWT_TOPIC
+	int "MQTT max length of lwt topic"
+	default 32
+
+config MQTT_MAX_LWT_MSG
+	int "MQTT max size of lwt message"
+	default 32
+
+
+endmenu
